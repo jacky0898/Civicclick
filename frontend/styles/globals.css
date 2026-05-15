@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep legacy form/button classes used by auth pages */
+.form-card {
+  @apply bg-white rounded-xl p-6 shadow max-w-md;
+}
+.form-group {
+  @apply mb-4;
+}
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer border-0 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn:hover { opacity: 0.88; }
+.btn-primary { @apply bg-blue-600 text-white; }
+.btn-success { @apply bg-green-600 text-white; }
+.btn-danger  { @apply bg-red-500 text-white; }
+.btn-sm      { @apply px-3 py-1 text-xs; }
