@@ -121,15 +121,16 @@ export default function IssueCard({ issue, actions }) {
         )}
       </div>
 
-      {/* Image */}
+      {/* Image — always shown prominently when available */}
       {imageUrl && (
-        <img
-          src={imageUrl}
-          alt={title || 'Issue photo'}
-          loading="lazy"
-          className="w-full h-44 object-cover rounded-xl mt-1 mb-3"
-          style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
-        />
+        <div className="mb-3 rounded-xl overflow-hidden" style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+          <img
+            src={imageUrl}
+            alt={title || 'Issue photo'}
+            loading="lazy"
+            className="w-full h-48 object-cover"
+          />
+        </div>
       )}
 
       {/* Actions */}
